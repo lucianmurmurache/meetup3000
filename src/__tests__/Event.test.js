@@ -23,7 +23,7 @@ describe('<Event /> component', () => {
         EventWrapper.setState({
             showDetails: false
         });
-        EventWrapper.find('.event-expand-btn').simulate('click');
+        EventWrapper.find('.event-details-btn').simulate('click');
         expect(EventWrapper.state('showDetails')).toBe(true);
     });
 

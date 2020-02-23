@@ -15,19 +15,19 @@ class Event extends Component {
         const showDetails = this.state.showDetails;
 
         return (
-            <div className="Event">
+            <div className="event">
                 <div className="event-overview">
-                    <p className="name">
+                    <p className="event-name">
                         {this.state.event.name}
                     </p>
-                    <p className="date">
+                    <p className="event-date">
                         {this.state.event.local_date}
                     </p>
-                    <p className="time">
+                    <p className="event-time">
                         {this.state.event.local_time}
                     </p>
                     <button
-                        className="event-expand-btn"
+                        className="event-details-btn"
                         onClick={() => this.handleShowDetails()}
                     >
                         More details

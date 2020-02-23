@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//import NumberOfEvents from './NumberOfEvents';
+import NumberOfEvents from './NumberOfEvents';
 import CitySearch from './CitySearch';
 import EventList from './EventList';
 import { getEvents } from './api';
@@ -21,6 +21,7 @@ class App extends Component {
       <div className="App" >
         <CitySearch updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
+        <NumberOfEvents />
       </div>
     );
   }
