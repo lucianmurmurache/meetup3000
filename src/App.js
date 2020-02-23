@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 
-import './App.css';
-import EventList from './EventList';
+//import NumberOfEvents from './NumberOfEvents';
 import CitySearch from './CitySearch';
+import EventList from './EventList';
 import { getEvents } from './api';
+import './App.css';
 
 class App extends Component {
+
+  state = {
+    events: []
+  }
 
   updateEvents = (lat, lon) => {
     getEvents(lat, lon).then(events => this.setState({ events }));
@@ -22,5 +27,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Console error:     TypeError: Cannot read property 'events' of null
