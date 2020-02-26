@@ -9,7 +9,6 @@ describe('<CitySearch /> component', () => {
     beforeAll(() => {
         // CitySearchWrapper = shallow(<CitySearch />);
         CitySearchWrapper = shallow(<CitySearch updateEvents={() => { }} />);
-
     });
 
     test('render text input', () => {
@@ -69,21 +68,14 @@ describe('<CitySearch /> component', () => {
         expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
         expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(0);
     });
-
 });
 
 //Integration test
 describe('<CitySearch /> integration', () => {
 
-    let CitySearchWrapper;
-    beforeAll(() => {
-        CitySearchWrapper = shallow(<CitySearch />);
-    });
-
     test('get a list of cities when user searches for Munich', async () => {
-        CitySearchWrapper.find('.city').simulate('change', {
-            target: { value: 'Munich' }
-        });
+        const CitySearchWrapper = shallow(<CitySearch />);
+        CitySearchWrapper.find('.city').simulate('change', { target: { value: 'Munich' } });
         await CitySearchWrapper.update();
         expect(CitySearchWrapper.state('suggestions')).toEqual([
             {
