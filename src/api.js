@@ -51,7 +51,7 @@ async function getOrRenewAccessToken(type, key) {
 
 
 async function getEvents(lat, lon) {
-    if (window.location.href.startsWith('https://localhost')) {
+    if (window.location.href.startsWith('http://localhost')) {
         return mockEvents.events;
     }
 
@@ -68,7 +68,7 @@ async function getEvents(lat, lon) {
 }
 
 async function getSuggestions(query) {
-    if (window.location.href.startsWith('https://localhost')) {
+    if (window.location.href.startsWith('http://localhost')) {
         return [
             {
                 city: 'Munich',
