@@ -79,17 +79,17 @@ input[type="text"], input[type="number"] {
   cursor: pointer;
 }
 
-.event-name {
+.event-overview-name {
   font-size: 18px;
   font-weight: 600;
 }
 
-.event-date {
+.event-overview-date {
   font-size: 18px;
   font-weight: 600;
 }
 
-.event-time {
+.event-overview-time {
   font-size: 18px;
   font-weight: 600;
 }

@@ -31,6 +31,23 @@ describe('<Event /> component', () => {
         expect(EventWrapper.find('.event-details'))
     });
 
+    test('event overview is renredered', () => {
+        expect(EventWrapper.find('.event-overview')).toHaveLength(1);
+    });
+
+    test('event overview children are rendered', () => {
+        expect(EventWrapper.find('.event-overview').children()).toHaveLength(4);
+    });
+
+    test('event details is rendered', () => {
+        expect(EventWrapper.find('.event-details')).toHaveLength(1);
+    });
+
+    test('event details children are rendered', () => {
+        EventWrapper.setState({ showDetails: true });
+        expect(EventWrapper.find('.event-details').children()).toHaveLength(1);
+    });
+
     test('event mock data setState', () => {
         EventWrapper.setState({
             event:
