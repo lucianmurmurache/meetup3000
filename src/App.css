@@ -34,7 +34,8 @@ p {
 }
 
 input[type="text"], input[type="number"] {
-  border: 1px solid #FFFFFFFF;
+  background-color: #F2AA4CFF;
+  border: 1px solid #00203FFF;
   padding: 8px 6px 8px 10px;
   color: #101820FF;
   align-self: center;
@@ -79,8 +80,9 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  color: #F2AA4CFF;
   background-color: #101820FF;
+  color: #F2AA4CFF;
+  cursor:pointer;
 }
 
 .event {
@@ -155,7 +157,7 @@ input[type="text"], input[type="number"] {
   width: 200px;
 }
 
-.numberOfEvents-label {
+.numberOfEvents label {
   color: #F2AA4CFF;
   margin-right: 15%;
 }
