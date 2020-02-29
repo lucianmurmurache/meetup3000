@@ -1,4 +1,5 @@
 .App {
+  background-color: #00203FFF;
   text-align: center;
   padding: 2% 5%;
 }
@@ -7,23 +8,39 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #F2AA4CFF;
+}
+
+h1 {
+  margin: 2%;
+  font-size: 48px;
+}
+
 ul {
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 p {
+  color: #F2AA4CFF;
   margin: 5px 0;
 }
 
 input[type="text"], input[type="number"] {
+  border: 1px solid #FFFFFFFF;
   padding: 8px 6px 8px 10px;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  line-height: 20px;
+  color: #000000FF;
   align-self: center;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  outline: none;
   height: 38px;
 }
 
@@ -32,21 +49,25 @@ input[type="text"], input[type="number"] {
 }
 
 .CitySearch {
-  display: flex;
   flex-direction: column;
+  color: #000000FF;
+  display: flex;
 }
 
 .suggestions {
-  width: 250px;
+  border-radius: 10px;
+  color: #000000FF;
   align-self: center;
-  margin: 0;
   font-size: 14px;
+  width: 250px;
+  margin: 0;
 }
 
 .suggestions > li {
-  text-align: left;
+  background-color: #F2AA4CFF;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  color: #000000FF;
+  text-align: left;
   cursor: default;
 }
 
@@ -57,45 +78,54 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  background-color: #BCDCDB;
+  background-color: #FCF6F5FF;
 }
 
 .event {
+  border: 1px solid #F2AA4CFF;
   padding: 10px 10px 20px;
   margin-bottom: 10px;
-  text-align: left;
-  border: 1px solid #ccc;
+  color: #F2AA4CFF;
   border-radius: 4px;
   position: relative;
+  text-align: left;
 }
 
 .event-details-btn {
+  background-color: #F2AA4CFF;
+  border-radius: 10px;
+  color: #000000FF;
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  text-align: center;
+  font-size: 16px;
   padding: 5px 8px;
-  border-radius: 4px;
-  outline: none;
   cursor: pointer;
+  outline: none;
+  bottom: 5px;
+  right: 5px;
 }
 
 .event-overview-name {
-  font-size: 18px;
+  color: #F2AA4CFF;
   font-weight: 600;
+  font-size: 22px;
 }
 
 .event-overview-date {
-  font-size: 18px;
+  color: #F2AA4CFF;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .event-overview-time {
-  font-size: 18px;
+  color: #F2AA4CFF;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .group-name {
   text-transform: uppercase;
+  color: #F2AA4CFF;
   font-size: 14px;
 }
 
@@ -107,8 +137,13 @@ input[type="text"], input[type="number"] {
   overflow-x: hidden;
 }
 
-.number-of-events {
-  width: 80px;
-  margin: 20px 0 50px;
+.numberOfEvents {
   text-align: right;
+  margin: 3% 0 5%;
+  width: 200px;
+}
+
+.numberOfEvents-label {
+  color: #F2AA4CFF;
+  margin-right: 15%;
 }

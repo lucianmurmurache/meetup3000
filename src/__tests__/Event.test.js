@@ -36,7 +36,7 @@ describe('<Event /> component', () => {
     });
 
     test('event overview children are rendered', () => {
-        expect(EventWrapper.find('.event-overview').children()).toHaveLength(4);
+        expect(EventWrapper.find('.event-overview').children()).toHaveLength(6);
     });
 
     test('event details is rendered', () => {

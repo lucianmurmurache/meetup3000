@@ -26,6 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
+        <h1>Meetup3000</h1>
 
         <CitySearch updateEvents={this.updateEvents} />
 
