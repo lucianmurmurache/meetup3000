@@ -36,7 +36,7 @@ describe('<Event /> component', () => {
     });
 
     test('event overview children are rendered', () => {
-        expect(EventWrapper.find('.event-overview').children()).toHaveLength(6);
+        expect(EventWrapper.find('.event-overview').children()).toHaveLength(3);
     });
 
     test('event details is rendered', () => {
@@ -45,7 +45,7 @@ describe('<Event /> component', () => {
 
     test('event details children are rendered', () => {
         EventWrapper.setState({ showDetails: true });
-        expect(EventWrapper.find('.event-details').children()).toHaveLength(1);
+        expect(EventWrapper.find('.event-details').children()).toHaveLength(5);
     });
 
     test('event mock data setState', () => {
