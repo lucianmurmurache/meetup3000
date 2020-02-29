@@ -1,5 +1,5 @@
 .App {
-  background-color: #00203FFF;
+  background-color: #101820FF;
   text-align: center;
   padding: 2% 5%;
 }
@@ -35,7 +35,7 @@ p {
 input[type="text"], input[type="number"] {
   border: 1px solid #FFFFFFFF;
   padding: 8px 6px 8px 10px;
-  color: #000000FF;
+  color: #101820FF;
   align-self: center;
   border-radius: 4px;
   line-height: 20px;
@@ -50,13 +50,13 @@ input[type="text"], input[type="number"] {
 
 .CitySearch {
   flex-direction: column;
-  color: #000000FF;
+  color: #101820FF;
   display: flex;
 }
 
 .suggestions {
   border-radius: 10px;
-  color: #000000FF;
+  color: #101820FF;
   align-self: center;
   font-size: 14px;
   width: 250px;
@@ -66,7 +66,7 @@ input[type="text"], input[type="number"] {
 .suggestions > li {
   background-color: #F2AA4CFF;
   padding: 8px 6px 8px 10px;
-  color: #000000FF;
+  color: #101820FF;
   text-align: left;
   cursor: default;
 }
@@ -78,7 +78,8 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  background-color: #FCF6F5FF;
+  color: #F2AA4CFF;
+  background-color: #101820FF;
 }
 
 .event {
@@ -92,17 +93,27 @@ input[type="text"], input[type="number"] {
 }
 
 .event-details-btn {
-  background-color: #F2AA4CFF;
-  border-radius: 10px;
-  color: #000000FF;
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px 8px;
-  cursor: pointer;
-  outline: none;
-  bottom: 5px;
-  right: 5px;
+	background:linear-gradient(to bottom, #F2AA4CFF 5%, #101820FF 100%);
+  box-shadow:inset 0px 1px 3px 0px #F2AA4CFF;
+	text-shadow:0px -1px 0px #2b665eff;
+	background-color:#101820FF;
+	border:1px solid #F2AA4CFF;
+	text-decoration:none;
+	display:inline-block;
+	padding:11px 23px;
+	border-radius:5px;
+	color:#ffffffff;
+	cursor:pointer;
+  font-size:16px;
+}
+
+.event-details-btn:hover {
+  background:linear-gradient(to bottom, #101820FF 5%, #F2AA4CFF 100%);
+	background-color:#101820FF;
+}
+
+.event-details-btn.active {
+	top:1px;
 }
 
 .event-overview-name {

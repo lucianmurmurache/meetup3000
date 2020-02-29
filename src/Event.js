@@ -18,11 +18,11 @@ class Event extends Component {
             <div className="event">
                 <div className="event-overview">
                     <p className="event-overview-name">{this.props.event.name}</p>
-                    <p className="event-overview-date">When: {this.props.event.local_date}</p>
-                    <p className="event-overview-time">Time: {this.props.event.local_time}</p>
-                    <p className="event-overview-max">Max capacity: {this.props.event.rsvp_limit}</p>
-                    <p className="event-overview-going">Going: {this.props.event.yes_rsvp_count}</p>
-                    <p className="event-overview-waitlist">Waitlist: {this.props.event.waitlist_count}</p>
+                    <p className="event-overview-date"><span className="label">When: </span>{this.props.event.local_date}</p>
+                    <p className="event-overview-time"><span className="label">Time: </span>{this.props.event.local_time}</p>
+                    <p className="event-overview-max"><span className="label">Max capacity: </span>{this.props.event.rsvp_limit}</p>
+                    <p className="event-overview-going"><span className="label">Going: </span>{this.props.event.yes_rsvp_count}</p>
+                    <p className="event-overview-waitlist"><span className="label">Waitlist: </span>{this.props.event.waitlist_count}</p>
                     <button className="event-details-btn" onClick={() => this.handleShowDetails()}>Show more</button>
                 </div>
                 {showDetails &&
