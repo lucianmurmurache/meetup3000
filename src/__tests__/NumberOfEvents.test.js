@@ -12,12 +12,12 @@ describe('<NumberOfEvents /> component', () => {
 
     test('render text input correctly', () => {
         const numberOfEvents = NumberOfEventsWrapper.state('numberOfEvents');
-        expect(NumberOfEventsWrapper.find('#numberOfEvents-input').prop('value')).toBe(numberOfEvents);
+        expect(NumberOfEventsWrapper.find('#numberOfEventsInput').prop('value')).toBe(numberOfEvents);
     });
 
     test('update state when input is changed', () => {
         const eventObject = { target: { value: 32 } };
-        NumberOfEventsWrapper.find('#numberOfEvents-input').simulate('change', eventObject);
+        NumberOfEventsWrapper.find('#numberOfEventsInput').simulate('change', eventObject);
         expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(32);
     });
 
