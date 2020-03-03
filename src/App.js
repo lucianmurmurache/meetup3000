@@ -10,17 +10,17 @@ class App extends Component {
 
   state = {
     events: [],
+    page: null,
     lat: null,
     lon: null
   }
 
   componentDidMount() {
-    getEvents().then(response => this.setState({ events: response }));
     this.updateEvents();
   }
 
-  updateEvents = (lat, lon) => {
-    getEvents(lat, lon).then(events => this.setState({ events }));
+  updateEvents = (lat, lon, page) => {
+    getEvents(lat, lon, page).then(events => this.setState({ events }));
   }
 
   render() {
@@ -30,7 +30,7 @@ class App extends Component {
 
         <CitySearch updateEvents={this.updateEvents} />
 
-        <NumberOfEvents />
+        <NumberOfEvents updateEvents={this.updateEvents} />
 
         <EventList events={this.state.events} />
 
