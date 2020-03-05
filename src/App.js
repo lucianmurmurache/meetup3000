@@ -10,7 +10,7 @@ class App extends Component {
 
   state = {
     events: [],
-    page: null,
+    page: 32,
     lat: null,
     lon: null
   }
@@ -20,7 +20,13 @@ class App extends Component {
   }
 
   updateEvents = (lat, lon, page) => {
-    getEvents(lat, lon, page).then(events => this.setState({ events }));
+    if (lat && lon) {
+      getEvents(lat, lon, this.state.page).then(events => this.setState({ events, lat, lon }));
+    } else if (page) {
+      getEvents(this.state.lat, this.state.lon, page).then(events => this.setState({ events, page }));
+    } else {
+      console.log("nothing changed, nothing to update");
+    }
   }
 
   render() {
