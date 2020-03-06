@@ -12,7 +12,7 @@ class NumberOfEvents extends Component {
 
         if (value <= 0) {
             this.setState({
-                infoText: 'The value must be at least 1',
+                infoText: 'Must be at least 1',
             });
         } else {
             this.setState({
