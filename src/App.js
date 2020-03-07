@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import NumberOfEvents from './NumberOfEvents';
+import { OfflineAlert } from './Alert';
 import CitySearch from './CitySearch';
 import EventList from './EventList';
 import { getEvents } from './api';
@@ -12,11 +13,21 @@ class App extends Component {
     events: [],
     page: 32,
     lat: null,
-    lon: null
+    lon: null,
+    offlineText: null
   }
 
   componentDidMount() {
     this.updateEvents();
+    window.addEventListener('online', this.offlineAlert());
+  }
+
+  offlineAlert = () => {
+    if (!navigator.onLine) {
+      this.setState({
+        offlineText: 'No internet access, the results are now locally stored and may not be up to date. Reconnect for an updated list of results.',
+      });
+    }
   }
 
   updateEvents = (lat, lon, page) => {
@@ -25,18 +36,25 @@ class App extends Component {
     } else if (page) {
       getEvents(this.state.lat, this.state.lon, page).then(events => this.setState({ events, page }));
     } else {
-      console.log("nothing changed, nothing to update");
+      getEvents(this.state.lat, this.state.lon, this.state.page).then(events =>
+        this.setState({ events })
+      );
     }
   }
 
   render() {
     return (
       <div className="App" >
+
         <h1>Meetup3000</h1>
 
         <CitySearch updateEvents={this.updateEvents} />
 
         <NumberOfEvents updateEvents={this.updateEvents} />
+
+        <div class="text-alert">
+          <OfflineAlert text={this.state.offlineText} />
+        </div>
 
         <EventList events={this.state.events} />
 
