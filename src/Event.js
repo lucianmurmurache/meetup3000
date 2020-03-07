@@ -21,18 +21,47 @@ class Event extends Component {
         return (
             <div className="event">
                 <div className="event-overview">
-                    <p className="event-overview-name">{this.props.event.name}</p>
-                    <p className="event-overview-date"><span>Event date: </span>{this.props.event.local_date}</p>
-                    <p className="event-overview-time"><span>Event time: </span>{this.props.event.local_time}</p>
-                    <button className="event-details-btn" onClick={() => this.handleShowDetails()}>Show more</button>
+                    <div className="event-overview-name">
+                        {this.props.event.name}
+                    </div>
+                    <div className="event-overview-date"> <span>Event date: </span>
+                        {this.props.event.local_date}
+                    </div>
+                    <div className="event-overview-time"> <span>Event time: </span>
+                        {this.props.event.local_time}
+                    </div>
+                    <button
+                        className="event-details-btn"
+                        onClick={() => this.handleShowDetails()}
+                    >
+                        Show more
+                    </button>
                 </div>
                 {showDetails &&
                     <div className="event-details">
-                        <p className="event-details-venue"><span>Venue name: </span>{this.props.event.venue && this.props.event.venue.name}</p>
-                        <p className="event-details-max"><span>Max capacity: </span>{this.props.event.rsvp_limit}</p>
-                        <p className="event-details-going"><span>Going: </span>{this.props.event.yes_rsvp_count}</p>
-                        <p className="event-details-waitlist"><span>Waitlist: </span>{this.props.event.waitlist_count}</p>
-                        <p className="event-details-description">{this.props.event.description}</p>
+                        <div className="event-details-venue"> <span>Venue name: </span>
+                            {this.props.event.venue && this.props.event.venue.name}
+                        </div>
+                        <div className="event-details-max"> <span>Max capacity: </span>
+                            {this.props.event.rsvp_limit}
+                        </div>
+                        <div className="event-details-going"> <span>Going: </span>
+                            {this.props.event.yes_rsvp_count}
+                        </div>
+                        <div className="event-details-waitlist"> <span>Waitlist: </span>
+                            {this.props.event.waitlist_count}
+                        </div>
+                        <div
+                            className="event-details-description"
+                            dangerouslySetInnerHTML={{ __html: this.props.event.description }}>
+                        </div>
+                        <br />
+                        <button
+                            className="event-details-btn"
+                            onClick={() => this.handleShowDetails()}
+                        >
+                            Show less
+                        </button>
                     </div>
                 }
             </div>

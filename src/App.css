@@ -1,5 +1,5 @@
 .App {
-  background-color: #101820FF;
+  background-color: #101820;
   font-family: 'Roboto', ;
   text-align: center;
   padding: 2% 5%;
@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
 }
 
 h1 {
@@ -29,10 +29,31 @@ ul {
 }
 
 p {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   margin: 5px 0;
 }
 
+a:link {
+  text-decoration: none;
+  color: #F2AA4C;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #F2AA4C;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:active {
+  text-decoration: none;
+  color: #F2AA4C;
+}
+
+/*=====Alerts=====*/
 .text-alert {
   text-align: center;
   margin-bottom: 1%;
@@ -42,10 +63,10 @@ p {
 }
 
 input[type="text"], input[type="number"] {
-  background-color: #F2AA4CFF;
-  border: 1px solid #00203FFF;
+  background-color: #F2AA4C;
+  border: 1px solid #00203F;
   padding: 8px 6px 8px 10px;
-  color: #101820FF;
+  color: #101820;
   align-self: center;
   border-radius: 0.3rem;
   line-height: 1.1rem;
@@ -60,13 +81,13 @@ input[type="text"], input[type="number"] {
 
 .CitySearch {
   flex-direction: column;
-  color: #101820FF;
+  color: #101820;
   display: flex;
 }
 
 .suggestions {
   border-radius: 10px;
-  color: #101820FF;
+  color: #101820;
   align-self: center;
   font-size: 1rem;
   width: 15rem;
@@ -74,9 +95,9 @@ input[type="text"], input[type="number"] {
 }
 
 .suggestions > li {
-  background-color: #F2AA4CFF;
+  background-color: #F2AA4C;
   padding: 8px 6px 8px 10px;
-  color: #101820FF;
+  color: #101820;
   text-align: left;
   cursor: default;
 }
@@ -88,16 +109,16 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  background-color: #101820FF;
-  color: #F2AA4CFF;
+  background-color: #101820;
+  color: #F2AA4C;
   cursor:pointer;
 }
 
 .event {
-  border: 1px solid #F2AA4CFF;
+  border: 1px solid #F2AA4C;
   padding: 10px 10px 20px;
   margin-bottom: 10px;
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   border-radius: 4px;
   position: relative;
   text-align: left;
@@ -115,22 +136,22 @@ input[type="text"], input[type="number"] {
 
 /*===Event Button===*/
 .event-details-btn {
-	background:linear-gradient(to bottom, #F2AA4CFF 5%, #101820FF 100%);
-	background-color:#101820FF;
-  border:1px solid #F2AA4CFF;
+	background:linear-gradient(to bottom, #F2AA4C 5%, #101820 100%);
+	background-color:#101820;
+  border:1px solid #F2AA4C;
 	text-decoration:none;
 	display:inline-block;
-	padding:11px 23px;
-	border-radius:5px;
-	color:#ffffffff;
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	color:#ffffff;
   transition: 1s;
 	cursor:pointer;
   font-size:1rem;
 }
 
 .event-details-btn:hover {
-  background:linear-gradient(to bottom, #101820FF 5%, #F2AA4CFF 100%);
-  color:#F2AA4CFF;
+  background:linear-gradient(to bottom, #101820 5%, #F2AA4C 100%);
+  color:#F2AA4C;
 }
 
 .event-details-btn.active {
@@ -142,24 +163,24 @@ input[type="text"], input[type="number"] {
 }
 
 .event-overview-name {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 .event-overview-date {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   font-size: 1.2rem;
 }
 
 .event-overview-time {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   font-size: 1.2rem;
 }
 
 .group-name {
   text-transform: uppercase;
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   font-size: 1.2rem;
 }
 
@@ -178,7 +199,7 @@ input[type="text"], input[type="number"] {
 }
 
 .numberOfEvents label {
-  color: #F2AA4CFF;
+  color: #F2AA4C;
   text-align: center;
   margin-right: 15%;
 }
