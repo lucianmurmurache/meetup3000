@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     this.updateEvents();
-    window.addEventListener('online', this.offlineAlert());
+    window.addEventListener('online', this.warningAlert());
   }
 
   warningAlert = () => {
@@ -36,9 +36,13 @@ class App extends Component {
 
   updateEvents = (lat, lon, page) => {
     if (lat && lon) {
-      getEvents(lat, lon, this.state.page).then(events => this.setState({ events, lat, lon }));
+      getEvents(lat, lon, this.state.page).then(events =>
+        this.setState({ events, lat, lon })
+      );
     } else if (page) {
-      getEvents(this.state.lat, this.state.lon, page).then(events => this.setState({ events, page }));
+      getEvents(this.state.lat, this.state.lon, page).then(events =>
+        this.setState({ events, page })
+      );
     } else {
       getEvents(this.state.lat, this.state.lon, this.state.page).then(events =>
         this.setState({ events })

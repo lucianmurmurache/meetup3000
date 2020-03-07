@@ -21,7 +21,7 @@ class CitySearch extends Component {
                 this.setState({
                     infoText: 'Unable to find this city, check the spelling or try another city!',
                 });
-            } else if (value && suggestions.length === 1) {
+            } else if (value && suggestions.length <= 1) {
                 this.setState({
                     infoText: 'At least 2 characters are required to trigger autocomplete!',
                 });
