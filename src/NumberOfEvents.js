@@ -14,6 +14,10 @@ class NumberOfEvents extends Component {
             this.setState({
                 infoText: 'Must be at least 1',
             });
+        } else if (value >= 100) {
+            this.setState({
+                infoText: '100 events will take longer to load, how about a smaller number?',
+            });
         } else {
             this.setState({
                 infoText: '',

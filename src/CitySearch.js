@@ -7,6 +7,7 @@ class CitySearch extends Component {
 
     state = {
         query: '',
+        infoText: '',
         suggestions: []
     }
 
@@ -18,7 +19,11 @@ class CitySearch extends Component {
 
             if (value && suggestions.length === 0) {
                 this.setState({
-                    infoText: 'Unable to find this city, check the spelling or try another city',
+                    infoText: 'Unable to find this city, check the spelling or try another city!',
+                });
+            } else if (value && suggestions.length === 1) {
+                this.setState({
+                    infoText: 'At least 2 characters are required to trigger autocomplete!',
                 });
             } else {
                 this.setState({
@@ -36,7 +41,7 @@ class CitySearch extends Component {
     render() {
         return (
             <div className="CitySearch">
-                <div class="text-alert">
+                <div className="text-alert">
                     <InfoAlert text={this.state.infoText} />
                 </div>
                 <input

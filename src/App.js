@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import NumberOfEvents from './NumberOfEvents';
-import { OfflineAlert } from './Alert';
+import { WarningAlert } from './Alert';
 import CitySearch from './CitySearch';
 import EventList from './EventList';
 import { getEvents } from './api';
@@ -14,7 +14,7 @@ class App extends Component {
     page: 32,
     lat: null,
     lon: null,
-    offlineText: null
+    infoText: null
   }
 
   componentDidMount() {
@@ -22,14 +22,14 @@ class App extends Component {
     window.addEventListener('online', this.offlineAlert());
   }
 
-  offlineAlert = () => {
+  warningAlert = () => {
     if (navigator.onLine === false) {
       this.setState({
-        offlineText: 'No internet access, the results are now locally stored and may not be up to date. Reconnect for an updated list of results.',
+        infoText: 'No internet access, the results are now locally stored and may not be up to date. Reconnect for an updated list of results.',
       });
     } else {
       this.setState({
-        offlineText: '',
+        infoText: '',
       });
     }
   }
@@ -54,8 +54,8 @@ class App extends Component {
 
         <CitySearch updateEvents={this.updateEvents} />
 
-        <div class="text-alert">
-          <OfflineAlert text={this.state.offlineText} />
+        <div className="text-alert">
+          <WarningAlert text={this.state.infoText} />
         </div>
 
         <NumberOfEvents updateEvents={this.updateEvents} />
