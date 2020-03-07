@@ -23,9 +23,13 @@ class App extends Component {
   }
 
   offlineAlert = () => {
-    if (!navigator.onLine) {
+    if (navigator.onLine === false) {
       this.setState({
         offlineText: 'No internet access, the results are now locally stored and may not be up to date. Reconnect for an updated list of results.',
+      });
+    } else {
+      this.setState({
+        offlineText: '',
       });
     }
   }
@@ -50,11 +54,11 @@ class App extends Component {
 
         <CitySearch updateEvents={this.updateEvents} />
 
-        <NumberOfEvents updateEvents={this.updateEvents} />
-
         <div class="text-alert">
           <OfflineAlert text={this.state.offlineText} />
         </div>
+
+        <NumberOfEvents updateEvents={this.updateEvents} />
 
         <EventList events={this.state.events} />
 

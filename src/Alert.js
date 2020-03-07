@@ -26,28 +26,28 @@ class Alert extends Component {
 class InfoAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'blue';
+        this.color = '#F2AA4C';
     }
 }
 
 class ErrorAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'red';
+        this.color = '#FF1927';
     }
 }
 
 class WarningAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'yellow';
+        this.color = '#ffff00';
     }
 }
 
 class OfflineAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'white';
+        this.color = '#ffffff';
     }
 }
 
