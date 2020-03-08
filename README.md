@@ -1,5 +1,4 @@
-## [Demo](https://lucianmurmurache.github.io/meetup3000/) 
-available but requires a meetup.com account!
+## [Demo](https://lucianmurmurache.github.io/meetup3000/)  available but requires a [meetup.com](http://meetup.com/) account!
 
 ## A serverless, progressive web application (PWA) 
 built with [React](https://reactjs.org/) using a test-driven development (TDD) technique. The application uses the [Meetup](http://meetup.com/) API to fetch upcoming events for a selected city. [AWS](https://aws.amazon.com/) used for the authorization server.
@@ -19,7 +18,6 @@ built with [React](https://reactjs.org/) using a test-driven development (TDD) t
 2. The app is built using the TDD technique.
 3. The app passes Lighthouse’s PWA checklist.
 4. The app makes use of data visualization (recharts).
-5. The app’s code is hosted in a Git repository on GitHub. 
 6. The app is monitored using an online monitoring tool [Atatus](https://www.atatus.com/).
 7. The app is using the Meetup API and OAuth2 authentication flow.
 8. The app works offline or in slow network conditions with the help of a service worker.
