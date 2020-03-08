@@ -16,7 +16,7 @@ class NumberOfEvents extends Component {
             });
         } else if (value >= 100) {
             this.setState({
-                infoText: '100 events will take longer to load, how about a smaller number?',
+                infoText: 'More than 50 events will take longer to load, how about a smaller number?',
             });
         } else {
             this.setState({
