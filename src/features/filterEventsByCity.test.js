@@ -70,5 +70,4 @@ defineFeature(feature, test => {
             expect(AppWrapper.find('.event')).toHaveLength(mockEvents.events.length);
         });
     });
-
 });

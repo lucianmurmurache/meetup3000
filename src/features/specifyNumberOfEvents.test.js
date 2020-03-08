@@ -1,9 +1,8 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import App from '../App';
 
-import { mockEvents } from '../mock-events';
 import NumberOfEvents from '../NumberOfEvents';
 import { loadFeature, defineFeature } from 'jest-cucumber';
 
@@ -33,7 +32,7 @@ defineFeature(feature, test => {
 
         when('the user specifies the number of events', () => {
             const eventsNumber = { target: { value: 3 } };
-            AppWrapper.find('.numberOfEventsInput').simulate('change', eventsNumber);
+            AppWrapper.find('#numberOfEventsInput').simulate('change', eventsNumber);
         });
 
         then('the number of events specified will be displayed', () => {
@@ -41,5 +40,4 @@ defineFeature(feature, test => {
             expect(numberOfEventsWrapper.state('query')).toBe(3);
         });
     });
-
 })

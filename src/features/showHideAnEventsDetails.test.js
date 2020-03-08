@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import App from '../App';
 
@@ -65,5 +65,4 @@ defineFeature(feature, test => {
             expect(AppWrapper.find('.event .event-details')).toHaveLength(0);
         });
     });
-
 });
