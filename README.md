@@ -1,6 +1,9 @@
-# A serverless, progressive web application (PWA) built with React using a test-driven development (TDD) technique. The application uses the Meetup API to fetch upcoming events for a selected city.
+## [Demo](https://lucianmurmurache.github.io/meetup3000/) 
+available but requires a meetup.com account!
 
-[Demo](https://lucianmurmurache.github.io/meetup3000/) available but requires a meetup.com account!
+## A serverless, progressive web application (PWA) 
+built with [React](https://reactjs.org/) using a test-driven development (TDD) technique. The application uses the [Meetup](http://meetup.com/) API to fetch upcoming events for a selected city. [AWS](https://aws.amazon.com/) used for the authorization server.
+
 
 
 ## Key Features
@@ -12,19 +15,19 @@
 6. View a chart showing the number of upcoming events by date.
 
 ## Technical Details
-● The app is a React application.
-● The app is built using the TDD technique.
-● The app passes Lighthouse’s PWA checklist.
-● The app makes use of data visualization (recharts).
-● The app’s code is hosted in a Git repository on GitHub. 
-● The app is monitored using an online monitoring tool [Atatus](https://www.atatus.com/).
-● The app is using the Meetup API and OAuth2 authentication flow.
-● The app works offline or in slow network conditions with the help of a service worker.
-● Users are able to install the app on desktop and add the app to their home screen on mobile.
-● The app has an alert system implemented using an OOP approach to show information to the user.
-● The app displays well on all screen sizes (including mobile and tablet) widths of 1920px and 320px.
-● The app works on the latest versions of Chrome, Firefox, Safari, Edge, and Opera, as well as on IE11.
-● The app is using serverless functions (AWS lambda is preferred) for the authorization server instead of using a traditional server.
+1. The app is a React application.
+2. The app is built using the TDD technique.
+3. The app passes Lighthouse’s PWA checklist.
+4. The app makes use of data visualization (recharts).
+5. The app’s code is hosted in a Git repository on GitHub. 
+6. The app is monitored using an online monitoring tool [Atatus](https://www.atatus.com/).
+7. The app is using the Meetup API and OAuth2 authentication flow.
+8. The app works offline or in slow network conditions with the help of a service worker.
+9. Users are able to install the app on desktop and add the app to their home screen on mobile.
+10. The app has an alert system implemented using an OOP approach to show information to the user.
+11. The app displays well on all screen sizes (including mobile and tablet) widths of 1920px and 320px.
+12. The app works on the latest versions of Chrome, Firefox, Safari, Edge, and Opera, as well as on IE11.
+13. The app is using serverless functions (AWS lambda) for the authorization server instead of using a traditional server.
 
 ### Available Scripts
 
