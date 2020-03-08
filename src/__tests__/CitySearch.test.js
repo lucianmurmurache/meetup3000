@@ -7,7 +7,6 @@ describe('<CitySearch /> component', () => {
 
     let CitySearchWrapper;
     beforeAll(() => {
-        // CitySearchWrapper = shallow(<CitySearch />);
         CitySearchWrapper = shallow(<CitySearch updateEvents={() => { }} />);
     });
 
