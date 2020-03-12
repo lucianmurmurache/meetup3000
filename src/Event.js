@@ -60,7 +60,11 @@ class Event extends Component {
                         className="event-details-btn"
                         onClick={() => this.handleShowDetails()}
                     >
-                        Show more
+                        {this.state.showDetails ? (
+                            <span>Show less</span>
+                        ) : (
+                                <span>Show more</span>
+                            )}
                     </button>
                 </div>
                 {showDetails &&
@@ -118,12 +122,6 @@ class Event extends Component {
                             dangerouslySetInnerHTML={{ __html: this.props.event.description }}>
                         </div>
                         <br />
-                        <button
-                            className="event-details-btn"
-                            onClick={() => this.handleShowDetails()}
-                        >
-                            Show less
-                        </button>
                     </div>
                 }
             </div>
