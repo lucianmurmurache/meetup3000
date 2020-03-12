@@ -12,11 +12,11 @@ class NumberOfEvents extends Component {
 
         if (value <= 0) {
             this.setState({
-                infoText: 'Must be at least 1',
+                infoText: 'The value must be at least 1',
             });
         } else if (value >= 100) {
             this.setState({
-                infoText: 'More than 50 events will take longer to load, how about a smaller number?',
+                infoText: 'Expect longer loading time!',
             });
         } else {
             this.setState({
@@ -29,14 +29,18 @@ class NumberOfEvents extends Component {
     render() {
         return (
             <div className="numberOfEvents">
-                <label>Number of results</label>
-                <input
-                    type="text"
-                    id="numberOfEventsInput"
-                    placeholder="32"
-                    value={this.state.query}
-                    onChange={this.handleInputChanged}
-                />
+                <label>
+                    Show
+                    <input
+                        type="text"
+                        id="numberOfEventsInput"
+                        placeholder="32"
+                        value={this.state.query}
+                        onChange={this.handleInputChanged}
+                    />
+                    results
+                </label>
+
                 <div className="text-alert">
                     <ErrorAlert text={this.state.infoText} />
                 </div>
